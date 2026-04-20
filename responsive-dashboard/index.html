@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h2>Dashboard</h2>
+    <div>
+      <button id="themeToggle">🌙</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li onclick="showPage('homePage')">🏠 Home</li>
+        <li onclick="showPage('analyticsPage')">📊 Analytics</li>
+        <li onclick="showPage('usersPage')">👥 Users</li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- HOME -->
+      <section id="homePage" class="page active">
+        <h2>🏠 Home</h2>
+        <h3 id="welcome"></h3>
+
+        <div class="cards">
+          <div class="card">Users: 1200</div>
+          <div class="card">Revenue: ₹50K</div>
+          <div class="card">Orders: 320</div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section id="analyticsPage" class="page">
+        <h2>📊 Analytics</h2>
+        <div class="card big-card">
+          <p>Monthly Growth</p>
+          <div class="chart-bar">
+            <div style="height:60%"></div>
+            <div style="height:80%"></div>
+            <div style="height:40%"></div>
+            <div style="height:90%"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USERS -->
+      <section id="usersPage" class="page">
+        <h2>👥 Users</h2>
+        <div id="userList" class="user-list"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
